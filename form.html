@@ -1,0 +1,180 @@
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Ordered Form</title>
+ 	<style>
+ 		*{
+ 			margin: 0px;
+ 			padding: 0px;
+
+ 		}
+ 		body {
+ 			background-image: url(https://iqbalazhari.com/wp-content/uploads/2017/01/Harga-Jasa-Content-Writer-Murah-Jogja.jpg);
+ 			background-size: auto;
+ 			background-position: center;
+ 			font-family: sans-serif;
+ 			margin-top: 20px;
+
+ 		}
+ 		.regform{
+ 			width: 800px;
+ 			background-color: rgb(0,0,0,8);
+ 			color: #ffffff;
+ 			padding: 10px;
+ 			text-align: center;
+ 			border-radius: 15px 15px 0px 0px;
+ 			margin-left: 265px;
+
+ 		}
+ 		.main{
+ 			background-color: rgb(0, 0, 0, 0.5);
+ 			width: 800px;
+ 			margin-left: 275px
+ 		}
+ 		form{
+ 			padding: 5px;
+
+ 		}
+ 		#name{
+ 			width: 100%;
+ 			height: 100px;
+ 		}
+ 		.name{
+ 			margin-left: 25px;
+ 			margin-top: 30px;
+ 			width: 125px;
+ 			color: white;
+ 			font-size: 23px;
+ 			font-weight: 700px;
+ 		}
+ 		.firstname{
+ 			position: relative;
+ 			left: 200px;
+ 			top: -37px;
+ 			line-height: 40px;
+ 			border-radius: 6px;
+ 			padding: 0 22px;
+ 			font-size: 16px;
+ 			width: 490px
+
+ 		}
+ 		.firstlabel{
+ 			position: relative;
+ 			color: #e5e5e5;
+ 			text-transform: capitalize;
+ 			font-size: 18px;
+ 			left: -340px;
+ 		}
+ 		.address{
+ 			position: relative;
+ 			left: 200px;
+ 			top: -37px;
+ 			line-height: 40px;
+ 			border-radius: 6px;
+ 			padding: 0 22px;
+ 			font-size: 16px;
+ 			color: #555;
+ 			width: 62%
+ 		}
+ 		.email{
+ 			position: relative;
+ 			left: 200px;
+ 			top: -37px;
+ 			line-height: 40px;
+ 			border-radius: 6px;
+ 			padding: 0 22px;
+ 			font-size: 16px;
+ 			color: #555;
+ 			width: 62%
+ 		}
+ 		.code{
+ 			position: relative;
+ 			left: 200px;
+ 			top: -37px;
+ 			line-height: 40px;
+ 			border-radius: 6px;
+ 			padding: 0 22px;
+ 			font-size: 16px;
+ 			width: 490px;
+ 		}
+ 		.area-code{
+			position: relative;
+ 			color: #e5e5e5;
+ 			text-transform: capitalize;
+ 			font-size: 18px;
+ 			left: -340px;
+ 		}
+ 		.option{
+ 			position: relative;
+ 			left: 200px;
+ 			top: -37px;
+ 			line-height: 40px;
+ 			border-radius: 6px;
+ 			padding: 0 22px;
+ 			font-size: 16px;
+ 			color: #555;
+ 			width: 68%;
+ 			height: 43px;
+ 			border: 3px solid;
+ 			border-width:  2px;
+ 			outline: none;
+ 			overflow: hidden;
+
+ 		}
+ 		.option option{
+ 			font-size: 18px
+ 		}
+ 		button{
+ 			background-color: #3baf9f;
+ 			display: block;
+ 			text-align: center;
+ 			border-radius: 12px;
+ 			border: 2px solid #366473;
+ 			padding: 14px 90px;
+ 			color: white;
+ 			cursor: pointer;
+ 			transition: 0.25px;
+ 			font-size: 25px;
+ 			font-weight: 100px;
+ 			font-family: sans-serif;
+ 			margin-left:  280px
+ 		}
+ 	</style>
+ </head>
+ <body>
+ 	<div class="regform"><h1>ORDERED FORM</h1></div>
+ 	<div class="main">
+ 		<form>
+ 			<div id="name">
+ 				<h2 class="name">Name</h2>
+ 				<input type="text" name="first_name" class="firstname" required="" placeholder="Your Name">
+ 				<label class="firstlabel">Full Name</label>
+
+ 			</div>
+ 			<h2 class="name">Address</h2>
+ 			<input type="text" name="Address" class="address" required="" placeholder="Your Address">
+
+ 			<h2 class="name">Email</h2>
+ 			<input type="text" name="email" class="email" required="" placeholder="Your Email">
+
+ 			<h2 class="name">Phone</h2>
+ 			<input type="text" name="area_code" class="code" required="" placeholder="Your Number Phone" max="15" min="11">
+ 			<label class="area-code"></label>
+
+ 			<h2 class="name">Payment</h2>
+ 			<select class="option" name="subject">
+ 				<option  >--Choose Option--</option>
+ 				<option>Cash On Delivery</option>
+ 				<option>Bank</option>
+ 				<option>E-Wallet</option>
+ 				<option>Counter</option>
+
+ 			</select>
+
+ 			<button type="Submit">Register</button>
+
+ 		</form>
+ 	</div>
+ </body>
+ </html>
