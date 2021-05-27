@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"> </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!--header-->
+        <div class="navbar">
+            <div class="header">
+                <div class="logo">
+                    <img src="img/shopp.jpeg" alt="logo">
+                </div>
+            </div>
+            <!-- menu -->
+            <div class="menu">
+                <a href="index.html" class="item">Home</a>
+                <a href="form.html" class="item">Registration</a>
+                <a href="evaluation.html" class="item">Evaluation</a>
+                <a href="about.html" class="item">About Us</a>
+            </div>
+        </div>
+        <div class="main">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div class="sk">
+                    <h3>Syarat & Ketentuan</h3>
+                    <ul>
+                        <li>Terbuka untuk Umum</li>
+                        <li>Berkelompok 3 - 5 Orang</li>
+                        <li>Membawakan Tari Tradisional</li>
+                    </ul>
+                </div>
+                <div class="location">
+                    <h3>LOKASI</h3>
+                    <p>Jakarta - Surabaya - Medan - Bandung - Makassar - Semarang - Palembang - Batam</p>
+                </div>
+            </div>
+            <!--content-->
+            <div class="content">
+                <div class="header2">
+                    <h2>Formulir Pembayaran</h2>
+                </div>
+                <form id="form" class="form" method="post" action="berhasil.html" onsubmit="return checkInputs()">
+                    <div class="form-control">
+                        <label>Nama kelompok</label>
+                        <input type="text" id="username">
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Nama Ketua Koordinator</label>
+                        <input type="text" id="username1">
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <p>Tarian Wajib</p>
+                        <select name="bebas" id="Pilih">
+                            <option value="0">Pilih Salah Satu</option>
+                            <option value="1">Tari Muang Sangkal</option>
+                            <option value="2">Tari Aceh</option>
+                            <option value="3">Tari Kecak</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label>Tarian Bebas</label>
+                        <input type="text" id="tari">
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-radio">
+                        <p>Tipe Lomba</p>
+                        <label>PELAJAR</label><input class="pelajar" type="radio" name="tipe" id="pelajar" value="pelajar">
+                        <label>UMUM</label><input class="pelajar" type="radio" name="tipe" id="umum" value="UMUM">
+                    </div>
+                    <div class="form-control">
+                        <label>Email</label>
+                        <input type="text" placeholder="a@gmail.com" id="email">
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>No hp</label>
+                        <input type="text" placeholder="081xxxxxxxx" id="telpon">
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Tanggal Pendaftaran</label>
+                        <input type="text" placeholder="dd/mm/yyyy" id="tanggal"> Date Format : dd/mm/yyyy
+                        <small>Error message</small>
+                    </div>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <h2>Sponsored By :</h2>
+            <div class="sponsor">
+                <img src="img/sponsor1.png" alt="sponsor1">
+                <img src="img/sponsor2.png" alt="sponsor1">
+                <img src="img/sponsor3.png" alt="sponsor1">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
