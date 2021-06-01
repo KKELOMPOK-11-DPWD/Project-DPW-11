@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <form action="#" method="GET" id="form">
+    <div id="eror" >
+      <div class="isiForm">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" name="nama" id="nama">
+      </div>
+      <div class="isiForm">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+      </div>
+      <div class="isiForm">
+        <label for="telepon">Telepon</label>
+        <input type="text" name="telepon" id="telepon">
+      </div>
+      <div class="isiForm">
+        <label for="alamat">Telepon</label>
+        <input type="text" name="telepon" id="alamat">
+      </div>
+    </div>
+    <button type="submit">Konfirmasi</button>
+  </form>
+
+</body>
+<script>
+  const nama =document.getElementById('nama');
+  const email =document.getElementById('email');
+  const telepon =document.getElementById('telepon');
+  const alamat = document.getElementById('alamat');
+  const form = document.getElementById('form');
+  const eror = document.getElementById('eror')
+
+  form.addEventListener('submit',(e)=>{
+    let pesan =[]
+    if (nama.value==='' || nama.value == null){
+      pesan.push('Wajib diisi')
+    }
+    if (pesan.length > 0){
+      e.preventDefault()
+      eror.innerText=pesan.join(',')
+    }
+  })
+
+  form.addEventListener('submit',(e)=>{
+    let pesan =[]
+    if (email.value==='' || nama.value == null){
+      pesan.push('Wajib diisi')
+    }
+    if (pesan.length > 0){
+      e.preventDefault()
+      eror.innerText=pesan.join(',')
+    }
+  })
+</script>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Terima Kasih</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body{
+      font-size: 20px;
+      font-family: Roboto;
+      text-align: center;
+      background-image: url(https://image.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg);
+      background-size: cover;
+
+    }
+    .container{
+      border: 1px solid;
+      width: 800px;
+      height: 220px;
+      box-sizing: content-box;
+      margin-left: 300px;
+      margin-top: 150px;
+      border-radius: 10px;
+      background-color: linear-gradient()
+    }
+    .isi h1{
+      text-align: center;;
+      justify-content: center;
+      margin-top: 15px;
+      padding: 5px;
+      font-family: Times New Rowman;
+      text-shadow: 2px 3px lightgrey;
+      text-transform: capitalize;
+
+    }
+    h5{
+      text-align: right;
+      font-style: inherit;
+      text-transform: capitalize;
+      margin-top: 15px;
+      margin-right: 10px
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="isi">
+      <h1>pesanan anda sedang dalam pengemasan</h1>
+    </div>
+    <div class="isi">
+      <h1>terima kasih telah mengunjungi toko kami </h1>
+    </div>
+    <div>
+      
+    </div>
+
+      <div>
+        <h5>semoga harimu menyenangkan :)</h5>
+      </div>
+  </div>
+</body>
+</html>

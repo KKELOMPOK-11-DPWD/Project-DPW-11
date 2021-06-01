@@ -1,0 +1,166 @@
+
+  <!DOCTYPE html>    
+  <html>    
+  <head>    
+   <title>Formulir Pemesanan</title>      
+   <style>
+   *{
+    margin: 0px;
+    padding: 0px;
+   } 
+   body{
+    background-image: url(https://www.teahub.io/photos/full/234-2342998_simple-powerpoint-background-images-architecture.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family:Georgia, serif;   
+  }
+  h6{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 20px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-style: inherit;
+  }
+  .daftar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh
+  }  
+   form{
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 5px salmon;
+    width: 500px;
+    background-color: lightgray;
+    height: 450px;
+    padding: 7px;
+   }
+   input{
+    box-sizing: border-box;
+    display: block;
+    padding: 5px;
+    margin: 10px;
+    width: 95%;
+    border-radius: 5px;
+   }
+   .tombol {
+    background-color: lightblue;
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    margin-left: 36%;
+
+   }
+   .tombol:hover{
+    background-color: lightgrey;
+    color: black;
+    border: 0.5px solid;
+
+   }
+   input:hover{
+    border: 0.5px solid lightblue;
+
+   }
+   label{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-left: 15px;
+    font-family: sans-serif;
+
+   }
+   textarea{
+    width: 95%;
+    display: block;
+    margin: 10px;
+    height: 40px;
+    border: 1px solid;
+    box-shadow: 2px lightblue;
+    border-radius: 5px
+
+   }
+   select{
+    margin-left: 20px;
+   display: inline-table;
+   }
+
+   span{
+    margin-top: 20px;
+   }
+  </style>
+  </head>    
+  <body>
+  <h6>FORMULIR PEMESANAN</h6>       
+   <div class="daftar"> 
+     <form method="post" action="terima kasih.html" onsubmit="return validasi_input(this)">     
+      <div>    
+       <label>Nama
+        <input type="text" name="nama" id="nama" placeholder="Tuliskan nama anda" />
+      </label>    
+      </div>    
+      <div>   
+            <label>Alamat</label>   
+           <td>   
+            <input type="alamat" name="alamat" id="alamat" placeholder="Tuliskan alamat Anda" /></label>    
+         </div>   
+      <div>    
+       <label>Email</label>    
+       <input type="email" name="email" id="email" placeholder="Tuliskan email Anda" />    
+      </div>    
+      <div>    
+       <label>No.HP</label>    
+       <input type="text" name="nohp" id="nohp" placeholder="Tuliskan No telepon Anda" />    
+      </div>
+      <div>
+        <label>Metode Pembayaran</label>
+        <select>
+          <option disabled="disabled">Pilihan</option>
+          <option value="Bayar di Tempat">Bayar di Tempat</option>
+          <option value="Bank">Bank</option>
+          <option value="Mini-market">Minimarket</option>
+          <option value="Pembayaran digital">Pembayaran digital</option>
+        </select>
+      </div>
+
+      <div>    
+       <span><label>Deskripsi</label></span> <br>    
+       <textarea placeholder="Tambahkan catatan khusus jika ada" class=""></textarea>  
+      </div>  
+             
+      <div>    
+       <input type="submit" value="Konfirmasi" class="tombol" onclick="next()">    
+      </div>    
+     </form>    
+   </div>
+     <script type="text/javascript">
+      function validasi_input(form){
+        pola_email=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (form.nama.value.length > 50 && form.nama.value.length !=0){
+          alert("Nama yang dimasukkan terlalu panjang");
+          form.nama.focus();
+          return (false);    
+      }    
+        else if (form.nama.value == ""){    
+          alert("Nama tidak boleh kosong");    
+          form.nama.focus();    
+          return (false);    
+      }    
+        else if (!pola_email.test(form.email.value)){    
+          alert ("Email yang anda masukkan kurang tepat");    
+          form.email.focus();    
+          return (false);    
+      }     
+        else if (form.nohp.value.length < 10 ){    
+          alert("Digit angka yang dimasukkan kurang dari 10");    
+          form.nohp.focus();    
+          return (false);    
+      }      
+      return (true);    
+  }    
+  		function next();
+  		document.location.href="terima kasih.html"
+  	</script>     
+  </body>    
+</html> 
