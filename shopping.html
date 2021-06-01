@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping</title>
+	<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style type="text/css">
+      	@import url(" https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap")
+
+      	*{
+      		margin: 0px;
+      		padding: 0px;
+      		box-sizing: border-box;
+      	}
+      	body{
+      		background-image: url();
+      		font-family: serif;
+      	}
+      	/*Tampilan untuk navbar*/
+      	.container{
+      		margin: 0px auto;
+      		max-width: 2000px;
+      		height: 70px;
+      		margin-bottom: 0px;
+      	}
+      	 nav{
+      		display: flex;
+      		justify-content: space-between;
+      		width: 100%;
+      		height: 85px;
+      		background-image: url(https://www.kibrispdr.org/data/background-hijau-pastel-19.jpg);
+      		color: black;
+      		box-shadow:  0 2px 10px -2px gray;
+      	}
+      	nav > *{
+      		margin: 15px;
+      	}
+      	 h1{
+      		margin-top: 10px;
+      		font-size: 27px;
+      		font-family: monospace;
+      		text-transform: capitalize;
+      		text-shadow: 10px lightgrey
+
+      	}
+      	.hitung_keranjang{
+      		display: flex;
+      		flex-direction: row;
+      		justify-content: center;
+      		width: 55px;
+      		height:55px;
+      		background-color: white;
+      		border: none;
+      		border-radius: 50%;
+      		position: relative;
+      		top:9px;
+      		left: -10px;
+      		align-items: center;
+      		cursor: pointer;
+      	}
+      	.hitung_keranjang span{
+      		margin-top: 30px;
+      		position: relative;
+      		font-size: 20px;
+      		margin-right: 3px;
+      		position: relative;
+      	}
+      	.fa-shopping-cart{
+      		font-size: 22px !important;
+      	}
+
+       	.keranjang_{
+      		display: none;
+      		position: absolute;
+      		right: 1.5%;
+      		background-color: white;
+      		top: 16%;
+      		border: none;
+      		border-radius: 10px;
+      		padding:15px;
+      		box-shadow: 2px 2px 10px  rgba(151,146,146,0.924);
+      		border-bottom: 1px solid lightgrey;
+      		width: 600px;
+      		z-index: 2;
+      	}
+      	.keranjang_.active{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+
+		}
+      	.keranjang_:active{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			 }
+      	.keranjang_::before{
+			content:"";
+			position: absolute;;
+			top: -5px;
+			width: 30px;
+			height: 20px;
+			background-color: black;
+			transform: rotate(45deg);
+			box-shadow: 2px 0px 10px -2px rgb(255,255,255);
+			background-color: white;
+			margin-left: 90%;
+		}
+      	.item_keranjang{
+      		display: flex;
+      		flex-direction: row;
+      		align-items: center;
+      		justify-content:center;
+      		width: 500px;
+      		border-bottom: 1px dashed grey; 
+      	}
+        .item_keranjang > *{
+      		margin: 5px;
+      	}
+      	.keranjang_ .item_keranjang img{
+      		width: 50px;
+      		height: 70px;
+      		border-radius: 10px;
+      		box-shadow: 2px solid black
+      	}
+      	.btn_small{
+      		background-color: lightgrey;
+      		color:black;
+      		padding: 5px 8px;
+      		border-bottom: 1px solid black;
+      		margin: 10px;
+      		cursor: pointer;
+      		border-radius: 10px;
+      	}
+      	.hapus_{
+      		background-color: orange;
+      	}
+      	.chekout{
+      		display: flex;
+      		flex-direction: row;
+      		align-items: center;
+      		justify-content : center;
+      		padding: 10px;
+      	}
+      	.harga_total{
+     		top:80%;
+     		left: 2%;
+     		position: relative;
+     	}
+     	 h4{
+     	 	display: inline;
+     	 	font-family: serif;
+     	}
+     	.bayar{
+     	    background-color: lightgrey;
+      		border: none;
+     		border-radius: 5px;
+     		font-size: 18px;
+     		padding: 10px 15px;
+     		margin-left: 20px;
+     		cursor: pointer;
+     	}
+     	.bayar:hover{
+     		background-color: lightblue;
+     	}
+
+     			/*Tampilan gambar*/
+     	.produk{
+     		display: grid;
+     		grid-template-columns:repeat(4,1fr); ;
+     		margin-top : 10px;
+     		font-size: 18px;
+     		grid-gap: 10px;
+
+     	}
+		.produk .elemen_produk{
+     		padding: 15px;
+     		width: 185px;
+     		height: 276px;
+     		background-color: white;
+     		box-shadow: 2px #fffffb;
+     		border: 1px solid grey;
+     		border-radius: 5px;
+     		padding: 20px;
+     		margin-left: 45px;
+     		justify-content: center;
+     		align-items: center;
+     		margin-top: 20px
+
+     	}
+     	.produk .elemen_produk img{
+     		width: 180px;
+     		height: 200px;
+     		border:  none;
+     		border-radius: 10px;
+     		position: relative;
+     		justify-content: center;
+     		align-items: center;
+     	}
+     	.produk .elemen_produk .nama_produk{
+     		text-align: center;
+     		/*justify-content: center;*/
+     		font-size: 20px;
+			margin-left: 60px
+		}
+		.produk .elemen_produk .harga_produk{
+     		font-size: 17px;
+     		/*justify-content: center;
+     		align-items: center;*/
+			margin: 10px;
+			margin-left: 48px;
+			
+     	}
+     	.beli{
+			background-color: #ffcdd2;
+			border-radius: 10px;
+			font-size: 17px;
+			width: 170px;
+			padding: 10px 15px;
+			margin: 0px auto;
+			margin-left: -8px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.beli:hover{
+			background-color: #ffeeff;
+			color: black;
+			border: 1px solid grey;
+		}
+      </style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav>
+				<!-- logo dan item barang yag dimasukan -->
+				<div class="logo">
+					<h1>girl's area</h1>
+				</div>
+				<div class="hitung_keranjang">
+					<i class="fa fa-shopping-cart"></i>
+					<span id="itung_total">0</span>
+				</div>
+			</nav>
+			<div class="keranjang">
+				<div class="keranjang_">
+<!-- 						<div class="item_keranjang">
+							<input type="hidden" name="" id="produk_id">
+							<img src="https://id-test-11.slatic.net/p/1da68b98f90ac4cfe966b4b29fc403ba.jpg_720x720q80.jpg_.webp" alt="" id="produk_">
+							<h4 class="nama_produk">Outer</h4>
+							<a  class="btn_small"  action="decrease">&minus;</a>
+							<h4 class="kuantitas_produk">100</h4>
+							<a  class="btn_small"  action="increase">&plus;</a>
+							<span class="harga_produk">Rp 150000</span>
+							<a  class="btn_small hapus_"  action="remove" >&times;</a>
+						</div> -->
+						<div class="chekout">
+							<h4>Total harga : Rp</h4>
+							<h4 class="harga_total">150000</h4>
+							<button class="bayar" onclick="next()">Bayar </button>
+				</div>
+			</div>
+		</header>
+
+		<div class="produk">
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="1">
+					<img src="https://id-test-11.slatic.net/p/1da68b98f90ac4cfe966b4b29fc403ba.jpg_720x720q80.jpg_.webp" id="gambar" alt="">
+					<h4 class="nama_produk">Outer</h4>
+					<h5 class="harga_produk">Rp 150000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="2">
+					<img src="3.jpg" id="gambar" alt="">
+					<h4 class="nama_produk">Outer</h4>
+					<h5 class="harga_produk">Rp 75000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="3">
+					<img src="5.jpg" id="gambar" alt="">
+					<h4 class="nama_produk">Outer</h4>
+					<h5 class="harga_produk">Rp 60000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="4">
+					<img src="7.jpg" id="gambar" alt="">
+					<h4 class="nama_produk">Outer</h4>
+					<h5 class="harga_produk">Rp 80000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="5">
+					<img src="9.jpg" id="gambar" alt="">
+					<h4 class="nama_produk">Outer</h4>
+					<h5 class="harga_produk">Rp 65000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="6">
+					<img src="https://id-test-11.slatic.net/p/1da68b98f90ac4cfe966b4b29fc403ba.jpg_720x720q80.jpg_.webp" id="gambar" alt="">
+					<h4 class="nama_produk">Outer</h4>
+					<h5 class="harga_produk">Rp 55000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="7">
+					<img src="11.jpg" id="gambar" alt="">
+					<h4 class="nama_produk">Outer</h4>
+					<h5 class="harga_produk">Rp 120000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="8">
+					<img src="13.jpg" id="gambar" alt="">
+					<h4 class="nama_produk">Outer</h4>
+					<h5 class="harga_produk">Rp 50000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="9">
+					<img src="15.jpg" id="gambar" alt="">
+					<h4 class="nama_produk">Outer</h4>
+					<h5 class="harga_produk">Rp 75000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="10">
+					<img src="17.jpg" id="gambar" alt="">
+					<h4 class="nama_produk">Outer</h4>
+					<h5 class="harga_produk">Rp 120000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+		</div>
+
+
+
+
+
+<script src="shopping.js"></script>
+</body>
+</html>
