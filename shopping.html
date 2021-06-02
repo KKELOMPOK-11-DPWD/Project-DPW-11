@@ -29,8 +29,10 @@
       		justify-content: space-between;
       		width: 100%;
       		height: 85px;
-      		background-image: url(https://www.kibrispdr.org/data/background-hijau-pastel-19.jpg);
+      		background-image: url(https://thumbs.dreamstime.com/b/abstract-holographic-colors-gradient-simple-abstract-color-background-pastel-colors-background-abstract-holographic-colors-154655405.jpg);
       		color: black;
+          background-size: cover;
+          background-repeat: no-repeat;
       		box-shadow:  0 2px 10px -2px gray;
       	}
       	nav > *{
@@ -38,10 +40,15 @@
       	}
       	 h1{
       		margin-top: 10px;
-      		font-size: 27px;
+      		font-size: 30px;
       		font-family: monospace;
-      		text-transform: capitalize;
-      		text-shadow: 10px lightgrey
+      		text-transform: uppercase;
+      		text-shadow: 10px lightgrey;
+          font-weight: bold;
+          /*margin-left: 500px;*/
+          font-style: inherit;
+
+
 
       	}
       	.hitung_keranjang{
@@ -167,7 +174,21 @@
      		background-color: lightblue;
      	}
 
-     			/*Tampilan gambar*/
+      /*Tampilan Sub pakaian*/
+      .atasan{
+        font-size: 30px;
+        margin-top: 20px;
+        font-family: sans-serif;
+        text-shadow: 1px 2px lightblue;
+        text-transform: initial;
+        margin-left: 600px;
+        position: relative;
+        letter-spacing: 1.5px;
+        color: salmon;
+        
+      }
+
+     			      /*Tampilan gambar*/
      	.produk{
      		display: grid;
      		grid-template-columns:repeat(4,1fr); ;
@@ -202,16 +223,12 @@
      	}
      	.produk .elemen_produk .nama_produk{
      		text-align: center;
-     		/*justify-content: center;*/
      		font-size: 20px;
-			margin-left: 60px
 		}
 		.produk .elemen_produk .harga_produk{
      		font-size: 17px;
-     		/*justify-content: center;
-     		align-items: center;*/
 			margin: 10px;
-			margin-left: 48px;
+			margin-left: 53px;
 			
      	}
      	.beli{
@@ -238,7 +255,7 @@
 			<nav>
 				<!-- logo dan item barang yag dimasukan -->
 				<div class="logo">
-					<h1>girl's area</h1>
+					<h1>girl's area cart</h1>
 				</div>
 				<div class="hitung_keranjang">
 					<i class="fa fa-shopping-cart"></i>
@@ -265,78 +282,232 @@
 			</div>
 		</header>
 
+
+    <div class="atasan">Pakaian</div>
 		<div class="produk">
 			<div class="elemen_produk">
 					<input type="hidden" name="" class="produk_id" value="1">
-					<img src="https://id-test-11.slatic.net/p/1da68b98f90ac4cfe966b4b29fc403ba.jpg_720x720q80.jpg_.webp" id="gambar" alt="">
-					<h4 class="nama_produk">Outer</h4>
-					<h5 class="harga_produk">Rp 150000</h5>
+					<a href="https://id-test-11.slatic.net/p/1da68b98f90ac4cfe966b4b29fc403ba.jpg_720x720q80.jpg_.webp"><img src="https://id-test-11.slatic.net/p/1da68b98f90ac4cfe966b4b29fc403ba.jpg_720x720q80.jpg_.webp" id="gambar" alt=""></a>
+					<center><h4 class="nama_produk">Bohemian</h4></center>
+					<h5 class="harga_produk">Rp 69000</h5>
 					<div class="beli">Masukkan keranjang</div>
 			</div>
 			<div class="elemen_produk">
 					<input type="hidden" name="" class="produk_id" value="2">
-					<img src="3.jpg" id="gambar" alt="">
-					<h4 class="nama_produk">Outer</h4>
+					<a href="3.jpg"><img src="3.jpg" id="gambar" alt="" ></a>
+					<center><h4 class="nama_produk">Blouse Scuba</h4></center>
 					<h5 class="harga_produk">Rp 75000</h5>
 					<div class="beli">Masukkan keranjang</div>
 			</div>
 			<div class="elemen_produk">
 					<input type="hidden" name="" class="produk_id" value="3">
-					<img src="5.jpg" id="gambar" alt="">
-					<h4 class="nama_produk">Outer</h4>
-					<h5 class="harga_produk">Rp 60000</h5>
+					<a href="5.jpg"><img src="5.jpg" id="gambar" alt=""></a>
+					<center><h4 class="nama_produk">Kemeja Rayon</h4></center>
+					<h5 class="harga_produk">Rp 42000</h5>
 					<div class="beli">Masukkan keranjang</div>
 			</div>
 			<div class="elemen_produk">
 					<input type="hidden" name="" class="produk_id" value="4">
-					<img src="7.jpg" id="gambar" alt="">
-					<h4 class="nama_produk">Outer</h4>
-					<h5 class="harga_produk">Rp 80000</h5>
+					<a href="7.jpg"><img src="7.jpg" id="gambar" alt=""></a>
+					<center><h4 class="nama_produk">Sweater Rajut</h4></center>
+					<h5 class="harga_produk">Rp 45000</h5>
 					<div class="beli">Masukkan keranjang</div>
 			</div>
 			<div class="elemen_produk">
 					<input type="hidden" name="" class="produk_id" value="5">
-					<img src="9.jpg" id="gambar" alt="">
-					<h4 class="nama_produk">Outer</h4>
-					<h5 class="harga_produk">Rp 65000</h5>
-					<div class="beli">Masukkan keranjang</div>
-			</div>
-			<div class="elemen_produk">
-					<input type="hidden" name="" class="produk_id" value="6">
-					<img src="https://id-test-11.slatic.net/p/1da68b98f90ac4cfe966b4b29fc403ba.jpg_720x720q80.jpg_.webp" id="gambar" alt="">
-					<h4 class="nama_produk">Outer</h4>
-					<h5 class="harga_produk">Rp 55000</h5>
-					<div class="beli">Masukkan keranjang</div>
-			</div>
-			<div class="elemen_produk">
-					<input type="hidden" name="" class="produk_id" value="7">
-					<img src="11.jpg" id="gambar" alt="">
-					<h4 class="nama_produk">Outer</h4>
-					<h5 class="harga_produk">Rp 120000</h5>
-					<div class="beli">Masukkan keranjang</div>
-			</div>
-			<div class="elemen_produk">
-					<input type="hidden" name="" class="produk_id" value="8">
-					<img src="13.jpg" id="gambar" alt="">
-					<h4 class="nama_produk">Outer</h4>
+					<a href="9.jpg"><img src="9.jpg" id="gambar" alt=""></a>
+					<center><h4 class="nama_produk">Hoodie</h4></center>
 					<h5 class="harga_produk">Rp 50000</h5>
 					<div class="beli">Masukkan keranjang</div>
 			</div>
 			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="6">
+					<a href="19.jpg"><img src="19.jpg" id="gambar" alt=""></a>
+					<center><h4 class="nama_produk">Tunik</h4></center>
+					<h5 class="harga_produk">Rp 76000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="7">
+					<a href="11.jpg"><img src="11.jpg" id="gambar" alt=""></a>
+					<center><h4 class="nama_produk"> Blouse dan Rompi</h4></center>
+					<h5 class="harga_produk">Rp 65000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
+					<input type="hidden" name="" class="produk_id" value="8">
+					<a href="13.jpg"><img src="13.jpg" id="gambar" alt=""></a>
+					<center><h4 class="nama_produk">Kaos Oversize</h4></center>
+					<h5 class="harga_produk">Rp 37000</h5>
+					<div class="beli">Masukkan keranjang</div>
+			</div>
+			<div class="elemen_produk">
 					<input type="hidden" name="" class="produk_id" value="9">
-					<img src="15.jpg" id="gambar" alt="">
-					<h4 class="nama_produk">Outer</h4>
-					<h5 class="harga_produk">Rp 75000</h5>
+					<a href="15.jpg"><img src="15.jpg" id="gambar" alt=""></a>
+					<center><h4 class="nama_produk">Simple Top</h4></center>
+					<h5 class="harga_produk">Rp 56000</h5>
 					<div class="beli">Masukkan keranjang</div>
 			</div>
 			<div class="elemen_produk">
 					<input type="hidden" name="" class="produk_id" value="10">
-					<img src="17.jpg" id="gambar" alt="">
-					<h4 class="nama_produk">Outer</h4>
-					<h5 class="harga_produk">Rp 120000</h5>
+					<a href="17.jpg"><img src="17.jpg" id="gambar" alt=""></a>
+					<center><h4 class="nama_produk">Korean Blouse</h4></center>
+					<h5 class="harga_produk">Rp 56000</h5>
 					<div class="beli">Masukkan keranjang</div>
 			</div>
+      <div>
+      </div>
 		</div>
+
+    <div class="atasan">Setelan</div>
+    <div class="produk">
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="11">
+          <a href="pajamas1.jpg"><img src="pajamas1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Pajamas</h4></center>
+          <h5 class="harga_produk">Rp 77000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="12">
+          <a href="settunik1.jpg"> <img src="settunik1.jpg" id="gambar" alt="" ></a>
+          <center><h4 class="nama_produk">Set Tunik</h4></center>
+          <h5 class="harga_produk">Rp 80000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="13">
+         <a href="motifpolos1.jpg"> <img src="motifpolos1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Polos</h4></center>
+          <h5 class="harga_produk">Rp 68000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="14">
+          <a href="sahira1.jpg"><img src="sahira1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Sahira</h4></center>
+          <h5 class="harga_produk">Rp 72000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="15">
+          <a href="sadewi1.jpg"><img src="sadewi1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Sadewi</h4></center>
+          <h5 class="harga_produk">Rp 67000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="16">
+          <a href="setkulot2.jpg"><img src="setkulot2.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Kulot Richis</h4></center>
+          <h5 class="harga_produk">Rp 85000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="17">
+          <a href="kantor1.jpg"><img src="kantor1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk"> Set Kantor</h4></center>
+          <h5 class="harga_produk">Rp 45000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="18">
+          <a href="setvika1.jpg"><img src="setvika1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Vika</h4></center>
+          <h5 class="harga_produk">Rp 110000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="19">
+          <img src="monalisa2.jpg" id="gambar" alt="">
+          <a href="monalisa2.jpg"><img src="monalisa2.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Monalisa</h4></center>
+          <h5 class="harga_produk">Rp 115000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="20">
+          <a href="newchika1.jpg"><img src="newchika1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Chika</h4></center>
+          <h5 class="harga_produk">Rp 72000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+    </div>
+
+    <div class="atasan">Celana</div>
+    <div class="produk">
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="11">
+          <a href="pajamas1.jpg"><img src="pajamas1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Pajamas</h4></center>
+          <h5 class="harga_produk">Rp 77000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="12">
+          <a href="settunik1.jpg"> <img src="settunik1.jpg" id="gambar" alt="" ></a>
+          <center><h4 class="nama_produk">Set Tunik</h4></center>
+          <h5 class="harga_produk">Rp 80000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="13">
+         <a href="motifpolos1.jpg"> <img src="motifpolos1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Polos</h4></center>
+          <h5 class="harga_produk">Rp 68000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="14">
+          <a href="sahira1.jpg"><img src="sahira1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Sahira</h4></center>
+          <h5 class="harga_produk">Rp 72000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="15">
+          <a href="sadewi1.jpg"><img src="sadewi1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Sadewi</h4></center>
+          <h5 class="harga_produk">Rp 67000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="16">
+          <a href="setkulot2.jpg"><img src="setkulot2.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Kulot Richis</h4></center>
+          <h5 class="harga_produk">Rp 85000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="17">
+          <a href="kantor1.jpg"><img src="kantor1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk"> Set Kantor</h4></center>
+          <h5 class="harga_produk">Rp 45000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="18">
+          <a href="setvika1.jpg"><img src="setvika1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Vika</h4></center>
+          <h5 class="harga_produk">Rp 110000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="19">
+          <img src="monalisa2.jpg" id="gambar" alt="">
+          <a href="monalisa2.jpg"><img src="monalisa2.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Monalisa</h4></center>
+          <h5 class="harga_produk">Rp 115000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+      <div class="elemen_produk">
+          <input type="hidden" name="" class="produk_id" value="20">
+          <a href="newchika1.jpg"><img src="newchika1.jpg" id="gambar" alt=""></a>
+          <center><h4 class="nama_produk">Set Chika</h4></center>
+          <h5 class="harga_produk">Rp 72000</h5>
+          <div class="beli">Masukkan keranjang</div>
+      </div>
+    </div>
 
 
 
